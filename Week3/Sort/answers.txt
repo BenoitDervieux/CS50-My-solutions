@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: The time difference between the random and the sorted list is n to n^2 different. The algorithm also performs best for the sorted list.
+
+sort2 uses: Merge sort
+
+How do you know?: The algorithm is the most performing. It also varies only depending on the number of values, not really on the fact that it is sorted, random or reversed.
+
+sort3 uses: Selection sort
+
+How do you know?: This algorithm does not perform best and does not respond to sorted, reverse or random values. Those sign indicate that it's a selection sort.
