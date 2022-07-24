@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Lesk for CS50</title>
+    </head>
+    <body>
+        <header>
+            <div class="headeur">
+            <a class="logo">
+                <img src="/homepage/Images/Lesk_logo.png" id="img_logo">
+            </a>
+
+            <div class="header_links menuComputer">
+                <a href="/homepage/index.html" id="anav">Lesk</a>
+                <a href="/homepage/cleaning/Cleaning.html" id="anav">Cleaning</a>
+                <a href="/homepage/Jambon/jambon.html" id="anav">Jambon-Beurre</a>
+                <a href="FranskaKlubbet.html" id="anav">Franska Klubbet</a>
+            </div>
+            <div class="header_links menuMobile">
+              <a href="/homepage/index.html" id="anav">Lesk<br></a>
+              <a href="/homepage/cleaning/Cleaning.html" id="anav">Cleaning<br></a>
+              <a href="/homepage/Jambon/jambon.html" id="anav">Jambon-Beurre<br></a>
+              <a href="FranskaKlubbet.html" id="anav">Franska Klubbet<br></a>
+          </div>
+            <div class="joinTheTribe">
+                <a href="#" class="buttonJoin header_cta">Join The tribe</a>
+            </div>
+        </div>
+    </header>
+    <section id="hautDuPanier">
+        <div class="principal">
+            <div class="copy">
+                <h1>Lesk get the party started</h1>
+                <p id="copyUnder">Change anywhere into a club. Your appartment, your garden,<br> and even your club...</p>
+                <div id="dansBouton"><button id="cta_copy">LET US SHOW YOU AROUND</button></div>
+            </div><!--
+            --><div class="imageLanding">
+                <div id="wrapper"></div>
+                <div id="wrapper2"></div>
+                <div id="wrapper3"></div>
+                <div id="wrapper4"></div>
+            <img src="/homepage/Images/Lesk_panel.png" id="imageLandingDiv">
+             </div>
+        </div>
+    </section>
+    <section id="BootstrapedPlace">
+        <div class="modal modal-signin position-static d-block bg-secondary2 py-5" tabindex="-1" role="dialog" id="modalSignin" style="border: 5px green dot">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                  <!-- <h5 class="modal-title">Modal title</h5> -->
+                  <h2 class="fw-bold mb-0">Join the tribe</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                  <form class="">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+                    <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+                    <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                    <hr class="my-4">
+                    <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                    <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                      <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
+                      Sign up with Twitter
+                    </button>
+                    <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                      <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+                      Sign up with Facebook
+                    </button>
+                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                      <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                      Sign up with GitHub
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </section>
+    </body>
+</html>

@@ -1,0 +1,435 @@
+html {
+    font-size: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+
+  body {
+    font-family: Poppins;
+    background-color: whitesmoke;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    line-height: 100%;
+  }
+
+  h1 {
+    font-family: 'Georgia';
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 7rem;
+    line-height: 6rem;
+    color: #2c2c2c;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-top: -1rem;
+  }
+
+  h3 {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.275rem;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+
+
+  .container {
+    width: 100%;
+  }
+
+
+header {
+  display: inline-block;
+  width: 99%;
+  height: 12rem;
+  /*border: 1px solid black;*/
+}
+
+
+  @media only screen and (min-width: 1080px) {
+
+    .menucomputer{
+      display:inline-block;
+      text-align: right;
+      padding-bottom: 2rem;
+      font-size: 1.5rem;
+      line-height: 150%;
+    }
+
+    .headeur {
+      height: 15.75rem;
+      display: block;
+      width: 99%;
+    }
+
+
+    .links {
+      font-size: 1rem;
+      color: #4d4d4d;
+      font-weight: 300;
+      text-align: right;
+      padding-right: 0.5rem;
+      padding-top: 1rem;
+      pointer-events: auto;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      width: 99%;
+      text-align: right;
+    }
+
+    .menu_links:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    .menu_links:hover {
+      color: black;
+      font-weight: 400;
+      -webkit-transition: color 150ms ease-in-out;
+      transition: color 150ms ease-in-out;
+    }
+
+    .menumobile {
+      display:none;
+    }
+
+    .logo_headeur {
+      display:block;
+      /*position: absolute;*/
+      height: 18.5rem;
+      margin-top: -5rem;
+    }
+
+    .logoo {
+      float: left;
+      width: 50%;
+      display:block;
+    }
+    .copy_landing {
+      width: 60%;
+      display: inline-block;
+    }
+
+    .ourEvents {
+      padding-bottom: 6rem;
+      padding-top: 6rem;
+    }
+
+    .events {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .eventCard {
+      background-color: white;
+      width: 25%;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      margin-right: 2rem;
+      -webkit-box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.12);
+              box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.12);
+    }
+
+  }
+
+  @media only screen and (min-width: 765px) and (max-width: 1080px)  {
+
+    .menucomputer{
+      display:inline-block;
+      text-align: center;
+      padding-bottom: 2rem;
+      font-size: 1.5rem;
+      line-height: 150%;
+
+    }
+
+
+    .links {
+      font-size: 1.3rem;
+      color: #4d4d4d;
+      font-weight: 500;
+      margin: auto;
+      padding-top: 0.5rem;
+      pointer-events: auto;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+
+    }
+
+    .menumobile {
+      display: none;
+
+    }
+    .logo_headeur {
+      display:block;
+      width: 100%;
+      margin-top: -12rem;
+      margin-bottom: -14rem;
+    }
+
+    .logoo {
+      width: 100%;
+      display:inline-block;
+      margin-left: -1rem;
+    }
+    #menu_links, :not(:last-child) {
+      padding-right: 1rem;
+
+    }
+    .landing {
+      padding-top: 2rem;
+      display:block;
+    }
+    h1 {
+      font-size: 6rem;
+      line-height: 100%;
+      padding-bottom: 1rem;
+      display:block;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+
+    #tagLine, p {
+      line-height: 110%;
+      display:block;
+      font-size: 2rem;
+    }
+    .landing {
+      display:block;
+    }
+    .pictures {
+      visibility: hidden;
+    }
+    .copy_landing {
+      width: 100%;
+      display: inline-block;
+    }
+
+    .ourEvents {
+      padding-bottom: 6rem;
+      padding-top: 2rem;
+    }
+    .eventsTitle {
+      padding-top: 4rem;
+      padding-bottom: 1rem;
+    }
+
+    .events {
+      display: block;
+    }
+
+    .eventCard {
+      background-color: white;
+      width: 90%;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      margin: auto;
+      margin-bottom: 3rem;
+      -webkit-box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.12);
+              box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+
+  @media only screen and (max-width: 765px) {
+
+      .headeur {
+    height: 15.75rem;
+    display: block;
+  }
+
+    .menucomputer{
+      display: none;
+    }
+
+    .inneTitle {
+      width: 100%;
+    }
+
+
+
+    .menumobile {
+      display:block;
+      text-align: left;
+      padding-bottom: 2rem;
+      padding-left: 0.9rem;
+      font-size: 1.5rem;
+      line-height: 150%;
+
+    }
+    .logo_headeur {
+      display:block;
+      width: 100%;
+      margin-top: -8rem;
+      margin-bottom: -10rem;
+    }
+
+    .logoo {
+      float: left;
+      width: 100%;
+      display:block;
+      margin-left: -1rem;
+    }
+    #menu_links {
+    }
+    .landing {
+      padding-top: 4rem;
+      display:block;
+    }
+    h1 {
+      font-size: 6rem;
+      line-height: 100%;
+      padding-bottom: 1rem;
+      display:block;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+
+    #tagLine, p {
+      line-height: 110%;
+      display:block;
+      font-size: 2rem;
+    }
+    .landing {
+      display:block;
+    }
+    .pictures {
+      visibility: hidden;
+    }
+    .copy_landing {
+      width: 100%;
+      float: left;
+      display: inline-block;
+    }
+
+    .ourEvents {
+      padding-bottom: 6rem;
+      padding-top: 6rem;
+    }
+    .eventsTitle {
+      padding-top: 4rem;
+      padding-bottom: 1rem;
+    }
+
+    .events {
+      display: block;
+    }
+
+    .eventCard {
+      wrap: flex;
+      background-color: white;
+      width: 90%;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      margin: auto;
+      margin-bottom: 3rem;
+      -webkit-box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.12);
+              box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.12);
+    }
+
+  }
+
+
+
+
+
+
+  #tagLine {
+    display: block;
+    font-family: Poppins;
+    /*font-size: 1.5rem;*/
+    line-height: 100%;
+  }
+
+  .landing {
+    display: block;
+    height: 400px;
+    padding-top: -2rem;
+    padding-bottom: 3rem;
+  }
+
+  .pictures {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  #subtitleOurEvents {
+    font-size: 1.275rem;
+    margin-top: -0.75rem;
+  }
+
+  .imageEvent1 {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  }
+
+
+
+  .eventCard:hover {
+    height: 105%;
+    -webkit-transition: height 100ms ease-in-out;
+    transition: height 100ms ease-in-out;
+  }
+
+  .cardcontainer {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+
+
+  .Date {
+    color: #7c7c7c;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 0.5;
+  }
+
+  .description {
+    color: black;
+    font-weight: 300;
+  }
+
+
+  /*# sourceMappingURL=style.css.map */
+
+
+  @media only screen and (max-width: 600px) {
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 1080px)  {
+  }
+
+
+  @media only screen and (max-width: 600px) {
+
+  }

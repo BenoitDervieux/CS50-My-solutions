@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What's the capital of France?</h3>
+                <button id="marseille" onclick="click">Marseille</button>
+                <button id="paris">Paris</button>
+                <button id="lyon">Lyon</button>
+                <br>
+                <p id="answer"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What's the name of the capital of the gastronomy?</h3>
+                <br>
+                <input type="text" id="answerQ" style="background-color:none">
+                <button id="response" onclick="rightAnswer()">Submit</button>
+                <br>
+                <p id="submittedanswer"></p>
+            </div>
+        </div>
+    </body>
+    <script>
+        let btnMarseille = document.querySelector('#marseille');
+        let btnParis = document.querySelector('#paris');
+        let btnLyon = document.querySelector('#lyon');
+        let btnSubmit = document.querySelector('#response');
+
+        btnMarseille.addEventListener('click', () => btnMarseille.style.backgroundColor='red')
+        btnParis.addEventListener('click', () => btnParis.style.backgroundColor='green')
+        btnLyon.addEventListener('click', () => btnLyon.style.backgroundColor='red')
+        //btnSubmit.addEventListener('click', rightAnswer())
+        //btnSubmit.addEventListener('click', () => document.getElementById('submittedanswer').innerHTML= document.getElementById('answerQ').value)
+
+        function rightAnswer() {
+                const val = document.getElementById('answerQ').value;
+                if (val == 'Lyon'  || val == 'lyon' ) {
+                    document.getElementById('submittedanswer').innerHTML= 'Correct!';
+                    answerQ.style.backgroundColor='green'
+                } else {
+                    document.getElementById('submittedanswer').innerHTML= 'Incorrect!';
+                    answerQ.style.backgroundColor='red'
+                }
+        }
+
+        btnMarseille.addEventListener('click', () => document.getElementById('answer').innerHTML='This is not the right answer')
+        btnParis.addEventListener('click', () => document.getElementById('answer').innerHTML='This is the right answer')
+        btnLyon.addEventListener('click', () => document.getElementById('answer').innerHTML='This is not the right answer')
+    </script>
+</html>
