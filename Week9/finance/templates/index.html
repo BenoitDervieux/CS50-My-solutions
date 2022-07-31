@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <main class="container py-5 text-center">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-start">Name</th>
+                    <th class="text-end">Shares</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">TOTAL</th>
+                </tr>
+            </thead>
+            {% for stonk in stonks %}
+            <tbody>
+                <td class="text-start">{{ stonk.symbol }}</td>
+                <td class="text-start">{{ stonk.name }}</td>
+                <td class="text-end">{{ stonk.quantity}}</td>
+                <td class="text-end">{{biege[stonk.symbol]}}</td>
+                <td class="text-end">{{"%0.2f" % (biege[stonk.symbol]*stonk.quantity)}}</td>
+            </tbody>
+            {% endfor %}
+            <tfoot>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                    <td class="border-0 text-end" colspan="4">{{"%0.2f" % (cash[0]['cash']) }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                    <td class="border-0 text-end" colspan="4">{{"%0.2f" % (total_stock + (cash[0]['cash']))}}</td>
+                </tr>
+
+            </tfoot>
+        </table>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Sell it directly</th>
+                <th class="text-start">More</th>
+                <th class="text-start">Number</th>
+                <th class="text-start">Less</th>
+                <th class="text-end">Buy</th>
+                <th class="text-end">Sell</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td class="text-start" style="text-align:left;">
+                <select class="form-select mx-auto" style="width:70%; float:left;" id="symbolID" onchange="copyTextValue()">
+                    <option disabled selected value="selected">Symbol</option>
+                    {% for stonk in stonks%}
+                    <option  value="{{stonk.symbol}}">{{stonk.symbol}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td class="text-start"><span class="btn btn-primary" id="increaseBtn" onclick="Increase(counter)">More</span></td>
+            <td class="text-start"><span id="shares" type="number" min="0">0</span></td>
+            <td class="text-start"><span class="btn btn-secondary" onclick="Decrease(counter)">Less</span></td>
+
+            <form action="/buy" method="post">
+            <input type="hidden" name="symbol" id="symbolBuy" type="text">
+            <input type="hidden" name="shares" id="input" type="number" min="0">
+            <td class="text-end"><button class="btn btn-outline btn-success"  type="submit" id="Buy">Buy</button></td>
+            </form>
+            <form action="/sell" method="post">
+            <input type="hidden" name="symbol" id="symbolSell" type="text">
+            <input type="hidden" name="shares" id="input2" type="number" min="0">
+            <td class="text-end"><button class="btn btn-outline-danger" id="Sell">Sell</button></td>
+            </form>
+        </tbody>
+    </table>
+    </main>
+
+    <script>
+
+        function copyTextValue() {
+            var e = document.getElementById('symbolID');
+            var val = e.options[e.selectedIndex].value;
+            document.getElementById('symbolBuy').value = val;
+            document.getElementById('symbolSell').value = val;
+        }
+
+
+        const x = document.getElementById('increaseBtn')
+        var counter = document.getElementById('shares')
+        var input_number_buy = document.getElementById('input')
+        var input_number_sell = document.getElementById('input2')
+        let count = 0
+
+        function Increase(counter) {
+            count++;
+            counter.innerHTML = count;
+            input_number_buy.value = count;
+            input_number_sell.value = count;
+        }
+
+        function Decrease(counter) {
+            count--;
+            if (count < 0 ) {
+                count = 0;
+                return;
+            }
+            counter.innerHTML = count;
+            input_number_buy.value = count;
+            input_number_sell.value = count;
+        }
+
+        var selection = document.getElementById('symbolID'),
+        validationButtonBuy = document.getElementById('Buy'),
+        validationButtonSell = document.getElementById('Sell')
+
+        validationButtonBuy.addEventListener('click', function (e) {
+            if (selection == "")
+            {
+                alert('You need to choose something')
+            }
+        })
+
+
+    </script>
+{% endblock %}
